@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'neon_led_lightregular';
+    src: url('neonledlight-webfont.woff2') format('woff2'),
+         url('neonledlight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body{
+    background-color: rgb(52, 50, 50);
+}
+.parallax-container{
+  height: 100vh;
+}
+h2{
+  font-family: 'Montserrat', sans-serif;
+}
+p{
+  font-family: 'Cardo', serif;
+
+}
+.neonText {
+  color: #fff;
+  animation: flicker 1.5s infinite alternate;
+  font-family: 'neon_led_lightregular'; 
+  position: absolute;
+  font-size: 16vw;
+  text-transform: uppercase;
+  margin-top: 10%;
+  margin-left: 10%;
+  }
+  @keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fd3768,
+        0 0 11px #fd3768,
+        0 0 19px #fd3768,
+        0 0 40px #0D61BC,
+        0 0 80px #0D61BC,
+        0 0 90px #0D61BC,
+        0 0 100px #fd3768,
+        0 0 150px #fd3768;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+  .tituloLand{
+    font-family: 'Inconsolata', monospace;
+    position: absolute;
+    top: 65%;
+    right: 0;
+    left:0;
+    bottom: 0;
+    margin: auto;
+    max-width: 80vw;
+    font-size: 3vw;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #fd3768 33%, #0D61BC 66%, #fd3768);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+  #botonKesha{
+    position: relative;
+    margin-left: 50%;
+    margin-top: 38%;
+    background: rgb(0, 0, 0) transparent;
+    font-size: 0.5rem; 
+    color: #ffffff;
+    z-index: 1;
+  }
+  .imagenGaleria{
+    height: 300px;
+  }
+  .fas{
+    color: #ffffff;
+  }
+  .f2{
+    margin-left: 18vw;
+  }
+ 
+  .textoInfo{
+    font-family: 'Inconsolata', monospace;
+    text-align:justify  !important;
+  }
+  .info{
+    color: #ffffff;
+    text-align: justify;
+  }
+  .imagen{
+    max-width: 101.7%;
+    max-height: 100vh;
+  }
+ 
+  .svg-wrapper {
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 10%;
+    transform: translateY(-50%);
+    width: 320px;
+  }
+  
+  .shape {
+    fill: transparent;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    stroke: #19f6e8;
+  }
+  .estilo{
+    color: #ffffff;
+  }
+  .text {
+    color: #fff !important;
+    font-family: 'Inconsolata', monospace  !important;
+    font-size: 22px;
+    letter-spacing: 8px;
+    line-height: 32px;
+    position: relative;
+    top: -48px;
+  }
+  
+  @keyframes draw {
+    0% {
+      stroke-dasharray: 140 540;
+      stroke-dashoffset: -474;
+      stroke-width: 8px;
+    }
+    100% {
+      stroke-dasharray: 760;
+      stroke-dashoffset: 0;
+      stroke-width: 2px;
+    }
+  }
+  
+  .svg-wrapper:hover .shape {
+    -webkit-animation: 0.5s draw linear forwards;
+    animation: 0.5s draw linear forwards;
+  }
