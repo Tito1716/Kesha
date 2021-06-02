@@ -52,6 +52,9 @@ p, .collapsible-header{
   .card{
     border-radius: 5%;
   }
+  .card-content, .collapsible-body{
+    text-align: center;
+  }
   .tituloLand{
     font-family: 'Inconsolata', monospace;
     position: absolute;
@@ -262,4 +265,51 @@ p, .collapsible-header{
     }
   }
 }
-/*# sourceMappingURL=prue.css.map */
+.card-v13 {
+  --transition-duration: .3s;
+}
+
+.card-v13__figure-wrapper {
+  display: block;
+}
+
+.card-v13__figure {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  -webkit-transition: -webkit-clip-path var(--transition-duration) var(--ease-out);
+  transition: -webkit-clip-path var(--transition-duration) var(--ease-out);
+  transition: clip-path var(--transition-duration) var(--ease-out);
+  transition: clip-path var(--transition-duration) var(--ease-out), -webkit-clip-path var(--transition-duration) var(--ease-out);
+}
+
+.card-v13__figure img {
+  display: block;
+  width: 100%;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: -webkit-transform var(--transition-duration) var(--ease-out), -webkit-filter var(--transition-duration);
+  transition: -webkit-transform var(--transition-duration) var(--ease-out), -webkit-filter var(--transition-duration);
+  transition: transform var(--transition-duration) var(--ease-out), filter var(--transition-duration);
+  transition: transform var(--transition-duration) var(--ease-out), filter var(--transition-duration), -webkit-transform var(--transition-duration) var(--ease-out), -webkit-filter var(--transition-duration);
+}
+
+.card-v13__figure-wrapper:hover .card-v13__figure {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.card-v13__figure-wrapper:hover .card-v13__figure img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+.card-v13__separator {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: var(--color-contrast-higher), 0.1;
+}
