@@ -1,8 +1,9 @@
 img, video, svg {
-  max-width: 100%;
+  max-width: 100%;/*La imagenes y videos y svg usen todo lo posible*/
 }
 
 :root, * {
+  /*Variables para los espacios responsivos*/
   --space-xxxxs: calc(0.125 * var(--space-unit));
   --space-xxxs:  calc(0.25 * var(--space-unit));
   --space-xxs:   calc(0.375 * var(--space-unit));
@@ -16,13 +17,13 @@ img, video, svg {
   --space-xxxxl: calc(13.75 * var(--space-unit));
   --component-padding: var(--space-md);
 }
-
+/*No lo usaste*/
 .container {
   width: calc(100% - 2*var(--component-padding));
   margin-left: auto;
   margin-right: auto;
 }
-
+/* Disposicion en pantalla*/
 .grid {
   --gap: 0px;
   --gap-x: var(--gap);
@@ -35,7 +36,7 @@ img, video, svg {
       flex-wrap: wrap;
 }
 
-.grid > * {
+.grid > * {/*Que todo lo*/
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   max-width: 100%;

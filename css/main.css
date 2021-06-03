@@ -4,7 +4,6 @@
          url('neonledlight-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 body{
     background-color: rgb(52, 50, 50);
@@ -20,20 +19,20 @@ p, .collapsible-header{
 
 }
 .neonText {
-  color: #fff;
-  animation: flicker 1.5s infinite alternate;
-  font-family: 'neon_led_lightregular'; 
+  color: #fff;/** El color base de las letras*/
+  animation: flicker 1.5s infinite alternate;/*Llamo a la propiedad flicker que dure  1.5 seg y que sea infinita*/
+  font-family: 'neon_led_lightregular';
   position: absolute;
   font-size: 16vw;
-  text-transform: uppercase;
+  text-transform: uppercase;/*No importa que siempre sea mayuscul*/
   margin-top: 10%;
   margin-left: 10%;
   }
   @keyframes flicker {
     
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {/* Se divide el porcentaje a tomar los efectos*/
   
-        text-shadow:
+        text-shadow:/* Agrega efectos de sombra difuminados*/
         0 0 4px #fd3768,
         0 0 11px #fd3768,
         0 0 19px #fd3768,
@@ -45,12 +44,12 @@ p, .collapsible-header{
     
     }
     
-    20%, 24%, 55% {        
+    20%, 24%, 55% {  /*Porcentaje de parpadeo*/
         text-shadow: none;
     }    
   }
   .card{
-    border-radius: 5%;
+    border-radius: 5%;/* Agrega las esquinas redondeadas de las tarjetas piciosa jijiji*/
   }
   .card-content, .collapsible-body{
     text-align: center;
@@ -67,18 +66,19 @@ p, .collapsible-header{
     font-size: 3vw;
     text-align: center;
     text-transform: uppercase;
-    background: linear-gradient(45deg, #fd3768 33%, #0D61BC 66%, #fd3768);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: linear-gradient(45deg, #fd3768 33%, #0D61BC 66%, #fd3768);/* Se agregar un efecto de degrado lineal y su porcentaje*/
+    -webkit-background-clip: text;/* Agarra el degradado de arriba para ejecutarlo en el texto*/
+    -webkit-text-fill-color: transparent;/*Lo mismo de arriba solo que este lo muestra*/
     }
   #botonKesha{
     position: relative;
     margin-left: 50%;
-    margin-top: 38%;
+    margin-top: 40%;
     background: rgb(0, 0, 0) transparent;
     font-size: 0.5rem; 
     color: #ffffff;
-    z-index: 1;
+    z-index: 1;/*Esto da importacia de muestra en la pagina si otro elemento lo cubre esta esta por encima, 
+    pasa para que el boton de bajar furule o funcionar te amoooo*/
   }
   .fondoColap{
     background-color: #EAE2B7;
@@ -104,7 +104,7 @@ p, .collapsible-header{
     margin-top: 20px;
   }
   .collapsible-header, .collapsible-body, .collapsible{
-    border-color: #EAE2B7 !important;
+    border-color: #EAE2B7 !important;/* Le da importacia sobre todo como yo a ti*/
   }
   .collapsible-header, .collapsible-body, .collapsible{
     background-color: #343232 !important;
@@ -128,16 +128,17 @@ p, .collapsible-header{
     margin: 0 auto;
     position: relative;
     margin-top: 10%;
-    transform: translateY(-50%);
+    transform: translateY(-50%);/* Haque los efectos tomen un valor en las ejes de la y que significa de arriba hacia abajo 
+    pero el -50 hace que sea para abajo hacia arriba*/
     width: 320px;
   }
   
-  .shape {
+  .shape { /*En el html usa la etiqueta rect que es rectangulo que se utiliza en los svg*/ 
     fill: transparent;
-    stroke-dasharray: 140 540;
-    stroke-dashoffset: -474;
-    stroke-width: 8px;
-    stroke: #19f6e8;
+    stroke-dasharray: 140 540;/*Controla el patrón de animaciones y espacios utilizados para realizar los  trazados.*/
+    stroke-dashoffset: -474;/*Especifica la distancia en el patrón de aniamciones para iniciarla.*/
+    stroke-width: 8px;/*Ancho de la lina*/
+    stroke: #19f6e8;/*Color de la linea*/
   }
   .estilo{
     color: #ffffff;
@@ -152,24 +153,24 @@ p, .collapsible-header{
     top: -48px;
   }
   
-  @keyframes draw {
+@keyframes draw {/*Estto dibuja la animacion del conocer más*/
     0% {
-      stroke-dasharray: 140 540;
+      stroke-dasharray: 140 540;/*Valores antes de iniciar*/
       stroke-dashoffset: -474;
       stroke-width: 8px;
     }
     100% {
-      stroke-dasharray: 760;
+      stroke-dasharray: 760;/*Valores añ finalizar*/
       stroke-dashoffset: 0;
       stroke-width: 2px;
     }
   }
-  
-  .svg-wrapper:hover .shape {
-    -webkit-animation: 0.5s draw linear forwards;
-    animation: 0.5s draw linear forwards;
+    
+  .svg-wrapper:hover .shape {/*Hover es cuando pone el cursor encima es una subclase de css y .shape es la funcion complementaria*/
+    -webkit-animation: 0.5s draw linear forwards;/*uTILIZA LAS FUNCIONES webKit que dura 0.5 seg, llama la funcion draw, que sea lineal*/
+    animation: 0.5s draw linear forwards;/*Por si un buscador no es complatible este si*/
   }
- 
+ /* Todo esto no lo utilisaste fue una parte eliminada 
 .adv-gallery {
   position: relative;
   z-index: 1;
@@ -264,49 +265,56 @@ p, .collapsible-header{
       height: 100%;
     }
   }
-}
+}*/
+/*Aqui se utiliza la libreria codyhouse y el scss*/
 .card-v13 {
-  --transition-duration: .3s;
+  --transition-duration: .3s;/*La animacion de la galeria de rombo a cuadrado dure 0.3 segundos*/
 }
 
 .card-v13__figure-wrapper {
-  display: block;
+  display: block;/*Es para mantener un orden en la pantalla*/
 }
 
-.card-v13__figure {
-  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  -webkit-transition: -webkit-clip-path var(--transition-duration) var(--ease-out);
-  transition: -webkit-clip-path var(--transition-duration) var(--ease-out);
-  transition: clip-path var(--transition-duration) var(--ease-out);
+.card-v13__figure {/*Forma de poligono*/
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);/*Realiza la forma de poligono de la imagen */
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);/*Que todo en las medidas de adentro sea visible 
+          y lo de afuera se recorta*/
+  -webkit-transition: -webkit-clip-path var(--transition-duration) var(--ease-out);/*Se utilizan variables de la libreria para 
+   ejecutar la animacio*/
+  transition: -webkit-clip-path var(--transition-duration) var(--ease-out);/*Combina toda las animaciones en una*/
+  transition: clip-path var(--transition-duration) var(--ease-out);/*Combina toda las animaciones en una*/
   transition: clip-path var(--transition-duration) var(--ease-out), -webkit-clip-path var(--transition-duration) var(--ease-out);
+  /*Combina toda las animaciones en una*/
 }
 
-.card-v13__figure img {
-  display: block;
+.card-v13__figure img {/*Las imagenes dentro de esta clase*/
+  display: block;/*Por bloques para que funcione la responsividad*/
   width: 100%;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-filter: grayscale(100%);
+  -webkit-transform: scale(1.1);/*Para que la imagen se adapate a su contedor de forma de poligono*/
+          transform: scale(1.1);/*Para otro navagadores*/
+  -webkit-filter: grayscale(100%);/*El color gris que tiene*/
           filter: grayscale(100%);
   -webkit-transition: -webkit-transform var(--transition-duration) var(--ease-out), -webkit-filter var(--transition-duration);
+    /*Combina toda las animaciones en una*/
   transition: -webkit-transform var(--transition-duration) var(--ease-out), -webkit-filter var(--transition-duration);
+    /*Combina toda las animaciones en una*/
   transition: transform var(--transition-duration) var(--ease-out), filter var(--transition-duration);
+  /*Combina toda las animaciones en una*/
   transition: transform var(--transition-duration) var(--ease-out), filter var(--transition-duration), -webkit-transform var(--transition-duration) var(--ease-out), -webkit-filter var(--transition-duration);
 }
 
 .card-v13__figure-wrapper:hover .card-v13__figure {
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);/*Cuando poner el cursor sobre la pantalla se transforme a cuadro*/
           clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .card-v13__figure-wrapper:hover .card-v13__figure img {
-  -webkit-transform: scale(1);
+  -webkit-transform: scale(1);/*Las imagenes salga de la forma de poligono a cuadrado*/
           transform: scale(1);
-  -webkit-filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);/*Se quita el color gris*/
           filter: grayscale(0%);
 }
-
+/*Es por si se quierr poner texto pero no lo usamos*/
 .card-v13__separator {
   display: block;
   width: 40px;
