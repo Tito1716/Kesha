@@ -4,6 +4,6 @@ $(document).ready(function(){
         fullWidth: true,
         indicators: true
       });
-    $(".venobox").venobox(); 
+
 });
 
